@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: false # el 3.10 falla y es bloqueante, con esto se desactiva para que al menos el 3.11 y el 3.12 funcionen
       matrix:
         python-version: ['3.10', '3.11', '3.12']
 
